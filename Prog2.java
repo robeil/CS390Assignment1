@@ -6,16 +6,14 @@ public class Prog2 {
 
     public static void prog2(String records){
 
+        //spliting the raws till the semicolon
         String[] recordRaw = records.split(":");
-        String[] recordId = new String[recordRaw.length];
 
         for(int i = 0; i < recordRaw.length; i++){
-            recordId[i] = recordRaw[i].substring(0,3);
+            //printing out the id only
+            System.out.println(recordRaw[i].split(",")[0]);
+
         }
-        System.out.println(Arrays.toString(recordId));
-     /*   for(int i = 0; i < recordId.length; i++){
-            System.out.println(Arrays.toString(recordId));
-        }*/
 
     }
 
@@ -46,6 +44,7 @@ public class Prog2 {
                 "933W,Cat Toy,15,Wilco,2.35:"+
                 "215A,Hair Ball,0,Little Jimmy,0.00:";
 
+        //calling the prog2 method
        prog2(records);
 
     }
