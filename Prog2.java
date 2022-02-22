@@ -1,9 +1,9 @@
 package CS390Assignment1;
 
-import java.util.Arrays;
-
 public class Prog2 {
-
+    /**
+     *Method for problem 2
+     */
     public static void prog2(String records){
 
         //spliting the raws till the semicolon
@@ -14,10 +14,12 @@ public class Prog2 {
             System.out.println(recordRaw[i].split(",")[0]);
 
         }
-
     }
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
+        /**
+         *      Problem 2
+         * ---------------------------------------------------------------------------
+         */
 
         String records = "231A,Light Bulb,123,Wilco,1.75:"+
                 "113D,Hairbrush,19,Aamco,3.75:"+
@@ -44,9 +46,7 @@ public class Prog2 {
                 "933W,Cat Toy,15,Wilco,2.35:"+
                 "215A,Hair Ball,0,Little Jimmy,0.00:";
 
-        //calling the prog2 method
-       prog2(records);
-
+        //calling the prog2 methods
+        prog2(records);
     }
-
 }
