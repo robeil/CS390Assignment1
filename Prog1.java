@@ -16,8 +16,8 @@ public class Prog1 {
         int y = RandomNumbers.getRandomInt(3,14);
 
         //printing out the result
-        System.out.println(Math.pow(Math.PI,x));
-        System.out.println(Math.pow(y,Math.PI));
+        System.out.println(Math.pow(x,Math.PI));
+        System.out.println(Math.pow(Math.PI,y));
 
 
     }
