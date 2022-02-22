@@ -10,11 +10,12 @@ public class Prog2 {
         String[] recordId = new String[recordRaw.length];
 
         for(int i = 0; i < recordRaw.length; i++){
-            recordId[i] += recordRaw[i].split(",");
+            recordId[i] = recordRaw[i].substring(0,3);
         }
-        for(int i = 0; i < recordId.length; i++){
+        System.out.println(Arrays.toString(recordId));
+     /*   for(int i = 0; i < recordId.length; i++){
             System.out.println(Arrays.toString(recordId));
-        }
+        }*/
 
     }
 
