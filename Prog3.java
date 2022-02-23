@@ -7,25 +7,39 @@ public class Prog3 {
      */
     public static String[] removeDups(String[] duplicate){
 
-
        if(duplicate == null || duplicate.length == 0){
            return null;
        }
         int count = 0;
-        boolean isDuplicate = false;
 
        for(int i = 0; i < duplicate.length; i++) {
            for (int j = 0; j < i; j++) {
                if (duplicate[i].equals(duplicate[j])) {
-                   isDuplicate = true;
+
                    count++;
+                   break;
                }
            }
        }
-        String[] newArray = new String[duplicate.length - count];
-       int index = 0;
-        while(!isDuplicate){
-         newArray[index++] = duplicate[index];
+       //creating new length and new array
+       int newLength = duplicate.length - count;
+        String[] newArray = new String[newLength];
+
+        //making sure the duplicated array and the new array to have the same starting string
+        newArray[0] = duplicate[0];
+        int index = 1;
+
+        //lloping again and assing the unrepeated string to the new array
+        for(int i = 1; i < duplicate.length; i++){
+            boolean isDuplicate = false;
+            for(int j = 0; j < i; j++){
+                if(duplicate[i].equals(duplicate[j])){
+                    isDuplicate = true;
+                }
+            }
+            if(!isDuplicate){
+                newArray[index++] = duplicate[i];
+            }
         }
 
         return newArray;
