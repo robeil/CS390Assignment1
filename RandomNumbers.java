@@ -9,7 +9,6 @@ public class RandomNumbers {
         random = new Random();
     }
 
-
     /**
      *  Use this method to get a random integer, with a call like this:
      *     int myInt = RandomNumbers.getRandomInt();
